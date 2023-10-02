@@ -27,11 +27,12 @@ class persona_model
 
 		$num_rows = mysqli_num_rows($consulta);
 
-		if ($num_rows > 0 || $num_rows < 1) {
+		if ($num_rows != 1) {
 			echo '<script>alert("Los datos son incorrectos, intente de nuevo.");</script>';
+			return false;
+		}else{
+			return true;
 		}
-		//El método devuelve el array resultante
-		return $this->persona;
 
 	}
 

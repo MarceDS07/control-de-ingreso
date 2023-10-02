@@ -11,7 +11,7 @@
                     <option value="alumno">Alumno</option>
                     <option value="docente">Docente</option>
                     <option value="no docente">No Docente</option>
-                    <option value="administrativo">Administrador</option>
+                    <option value="administrador">Administrador</option>
                 </select><br>
                 <input type="submit" value="borrar" class="boton" name='borrarUsuario'>
                 <input type="submit" value="guardar" class="boton" name='guardarUsuario'>

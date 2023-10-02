@@ -11,7 +11,7 @@ if (!empty($_POST['botonLogin']))
     } else {
         $ci = $_POST['cedula'];
         $p->login($ci);
-        if ($p->login($ci) != 0) {
+        if ($p->login($ci)) {
             header("Location: Controller\inicio_Controller.php");
         }
     }
