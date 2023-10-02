@@ -1,0 +1,138 @@
+.carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.div-centrado {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja {
+  background: #620023;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
+
+.caja form input {
+  border: 0;
+  outline: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.caja form select {
+  border: 0;
+  outline: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+}
+
+select option {
+background-color: #620023;
+}
+
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  box-shadow: none;
+}
+
+.registro form input {
+  text-align: center;
+  color: #fff;
+  width: 350px;
+  height: 70px;
+}
+
+.registro form select {
+  -ms-flex-align: center;
+  text-align: center;
+  color: #fff;
+  width: 350px;
+  height: 70px;
+}
+
+form .display select {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  box-shadow: none;
+}
+
+::placeholder {
+  color: hsl(0, 0%, 77%);
+}
+
+.registro form input.boton {
+  width: 100px;
+}
+
+.tabla {
+  height: 100%;
+  width: 800px;
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.caja-login {
+  background: #620023;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caja-login form input {
+  border: 0;
+  outline: 0;
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+}
