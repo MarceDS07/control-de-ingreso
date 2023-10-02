@@ -5,9 +5,9 @@ create table persona(
     nombre varchar(100),
     apellido varchar(100),
     tipo enum(
-        'Alumno',
-        'Docente',
-        'no Docente',
+        'alumno',
+        'docente',
+        'no docente',
         'administrador',
         'invitado'
     )
