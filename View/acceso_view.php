@@ -26,7 +26,19 @@
             </div>
         </form>
 
-        <div class="tabla">Tabla</div>
+        <table class="tabla" border="1" width="300">
+            <tr>
+                <th>CI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+            <?php
+                //Recorremos el array para ir mostrando fila a fila los registros
+                foreach ($datos as $dato) {
+                    echo "<tr><td>".$dato["ci"]."</td><td>".$dato["nombre"]."</td><td>".$dato["apellido"]."</td>";
+                }
+            ?>
+        </table>
 
     </div>
 </div>

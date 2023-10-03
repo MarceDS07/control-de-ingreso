@@ -136,3 +136,9 @@ form .display select {
   margin: 10px;
   text-align: center;
 }
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
