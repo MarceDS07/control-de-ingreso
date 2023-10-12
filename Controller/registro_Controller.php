@@ -1,8 +1,9 @@
 <?php
 
-require_once('..\View\registro_view.php');
 require_once('..\Model\persona_model.php');
 $p = new persona_model();
+$datos = $p->getPersona();
+require_once('..\View\registro_view.php');
 
 
 if (!empty($_POST['guardarUsuario'])) 
