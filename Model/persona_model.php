@@ -99,7 +99,7 @@ class persona_model
 	public function updatePersona($ci, $nombre, $apellido, $tipo)
 	{
 
-		$sql = "UPDATE `persona` SET `nombre`='$nombre',`apellido`='$apellido',`$tipo`='[value-4]' WHERE ci = $ci";
+		$sql = "UPDATE `persona` SET `nombre`='$nombre',`apellido`='$apellido',`tipo`='$tipo' WHERE ci = $ci";
 		if ($this->db->query($sql)) {
 			return true;
 		} else {

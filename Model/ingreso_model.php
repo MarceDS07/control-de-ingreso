@@ -28,6 +28,23 @@
 			
 		}
 
+		public function verifyIngreso($ci)
+		{
+	
+			$sql = "SELECT * from ingreso where ci=$ci and tipo='administrador'";
+			$consulta = $this->db->query($sql);
+	
+			$num_rows = mysqli_num_rows($consulta);
+	
+			if ($num_rows != 1) {
+				echo '<script>alert("Los datos son incorrectos, intente de nuevo.");</script>';
+				return false;
+			}else{
+				return true;
+			}
+	
+		}
+
 		
 		
 

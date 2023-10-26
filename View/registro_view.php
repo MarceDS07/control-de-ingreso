@@ -24,11 +24,12 @@
                 <th>CI</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Tipo</th>
             </tr>
             <?php
                 //Recorremos el array para ir mostrando fila a fila los registros
                 foreach ($datos as $dato) {
-                    echo "<tr><td>".$dato["ci"]."</td><td>".$dato["nombre"]."</td><td>".$dato["apellido"]."</td>";
+                    echo "<tr><td>".$dato["ci"]."</td><td>".$dato["nombre"]."</td><td>".$dato["apellido"]."</td><td>".$dato["tipo"]."</td>";
                 }
             ?>
         </table>

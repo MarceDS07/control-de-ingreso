@@ -7,7 +7,6 @@ $ingreso = new ingreso_model();
 $persona = new persona_model();
 
 $datos = $persona->getPersona();
-
 require_once('..\View\acceso_view.php');
 
 if (!empty($_POST['ingresar']))
@@ -15,9 +14,11 @@ if (!empty($_POST['ingresar']))
         echo "Cedula invalida";
     } else {
         $ci = $_POST['cedula'];
-        $ingreso->insertIngreso($ci);
         if ($ingreso->insertIngreso($ci) != 0) {
+            sleep(3);
             header("Location: acceso_Controller.php");
+        }else{
+            echo "<script>alert('Ingreso Incorrecto');</script>";
         }
     }
 
