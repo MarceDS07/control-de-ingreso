@@ -22,7 +22,7 @@ class persona_model
 	public function getPersona()
 	{
 
-		$sql = "SELECT TOP 10 * FROM `persona` ORDER BY ci";
+		$sql = "SELECT * FROM `persona` ORDER BY ci";
 		$consulta = $this->db->query($sql);
 
 		while ($filas = $consulta->fetch_assoc()) {
