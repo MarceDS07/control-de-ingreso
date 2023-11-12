@@ -1,11 +1,11 @@
-<?php include 'header_Controller.php'?>
+<?php include 'header_Controller.php' ?>
 
 <div class="div-centrado">
     <div class="caja">
         <form action="" method="POST">
             <div class="display">
                 <p style="color: aliceblue;">Ingrese su cedula</p>
-                <input type="text" name="cedula" value="<?php if(isset($_SESSION['validacion'])){echo "$val";}?>">
+                <input type="text" name="cedula">
             </div>
             <div>
                 <input type="button" value="7" onclick="cedula.value += '7'">
@@ -25,6 +25,20 @@
                 <input type="submit" value="ac" name='ingresar'>
             </div>
         </form>
+
+        <table class="tabla" border="1" width="300">
+            <tr>
+                <th>CI</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+            <?php
+                //Recorremos el array para ir mostrando fila a fila los registros
+                foreach ($datos as $dato) {
+                    echo "<tr><td>".$dato["ci"]."</td><td>".$dato["nombre"]."</td><td>".$dato["apellido"]."</td>";
+                }
+            ?>
+        </table>
 
     </div>
 </div>

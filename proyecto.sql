@@ -20,4 +20,11 @@ create table ingreso(
     primary key (id),
     foreign key (cedula) references persona(ci)
 )engine=InnoDB;
+create table ingresoInvitado(
+    id int auto_increment,
+    cedula int,
+    fecha date,
+    hora time,
+    primary key (id)
+);
 INSERT INTO `persona`(`ci`, `nombre`, `apellido`, `tipo`) VALUES ('54174542','Marcelo','de Souza','administrador')

@@ -19,13 +19,26 @@
 		//Declaramos un metodo para crear nuevos registros en la tabla
 		public function insertIngreso($ci){
 			
-			$sql = "INSERT INTO ingreso(cedula, fecha, hora) VALUES ('$ci',CURRENT_DATE(),CURRENT_TIME())";
-			if($this->db->query($sql)){
-				return true;
+			$sql = "SELECT * from persona where ci=$ci";
+			$consulta = $this->db->query($sql);
+	
+			$num_rows = mysqli_num_rows($consulta);
+	
+			if ($num_rows == 1) {
+				$sql = "INSERT INTO ingreso(cedula, fecha, hora) VALUES ('$ci',CURRENT_DATE(),CURRENT_TIME())";
+				if($this->db->query($sql)){
+					return true;
+				}else{
+					return false;
+				}
 			}else{
-				return false;
-			}
-			
+				$sql = "INSERT INTO ingresoInvitado(cedula, fecha, hora) VALUES ('$ci',CURRENT_DATE(),CURRENT_TIME())";
+				if($this->db->query($sql)){
+					return true;
+				}else{
+					return false;
+				}
+			}	
 		}
 
 		public function verifyIngreso($ci)
