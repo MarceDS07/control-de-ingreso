@@ -30,7 +30,7 @@
     <div class="caja-login" style="color: aliceblue;">
       <div class="login">
         <form action="" method="POST">
-          <input type="text" name="cedula" id='input' placeholder="Cedula"><br>
+          <input type="password" name="cedula" id='input' placeholder="Cedula"><br>
           <input type="submit" value="Login" class="boton" name='botonLogin'>
         </form>
       </div>

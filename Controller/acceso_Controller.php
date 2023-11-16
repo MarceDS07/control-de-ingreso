@@ -15,7 +15,6 @@ if (!empty($_POST['ingresar']))
     } else {
         $ci = $_POST['cedula'];
         if ($ingreso->insertIngreso($ci) != 0) {
-            sleep(3);
             header("Location: acceso_Controller.php");
         }else{
             echo "<script>alert('Ingreso Incorrecto');</script>";
