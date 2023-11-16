@@ -25,15 +25,16 @@
 			$num_rows = mysqli_num_rows($consulta);
 	
 			if ($num_rows == 1) {
-				$sql = "INSERT INTO ingreso(cedula, fecha, hora) VALUES ('$ci',CURRENT_DATE(),CURRENT_TIME())";
+				$sql = "INSERT INTO ingreso(cedula) VALUES ('$ci')";
 				if($this->db->query($sql)){
 					return true;
 				}else{
 					return false;
 				}
 			}else{
-				$sql = "INSERT INTO ingresoInvitado(cedula, fecha, hora) VALUES ('$ci',CURRENT_DATE(),CURRENT_TIME())";
+				$sql = "INSERT INTO ingresoInvitado(cedula) VALUES ('$ci')";
 				if($this->db->query($sql)){
+					echo "<script>alert('Ingreso Invitado');</script>";
 					return true;
 				}else{
 					return false;
@@ -41,6 +42,20 @@
 			}	
 		}
 
+		public function getIngresos()
+	{
+
+		$sql = "SELECT * FROM `ingreso` INNER JOIN persona ON ingreso.cedula = persona.ci order by fecha DESC limit 12 ";
+		$consulta = $this->db->query($sql);
+
+		while ($filas = $consulta->fetch_assoc()) {
+			//Asignamos al atributo personas el resultado de la consulta
+			$this->persona[] = $filas;
+		}
+		//El método devuelve el array resultante
+		return $this->persona;
+
+	}
 		public function verifyIngreso($ci)
 		{
 	

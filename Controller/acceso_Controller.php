@@ -6,7 +6,7 @@ require_once('..\Model\persona_model.php');
 $ingreso = new ingreso_model();
 $persona = new persona_model();
 
-$datos = $persona->getPersona();
+$datos = $ingreso->getIngresos();
 require_once('..\View\acceso_view.php');
 
 if (!empty($_POST['ingresar']))

@@ -22,7 +22,7 @@ class persona_model
 	public function getPersona()
 	{
 
-		$sql = "SELECT * FROM `persona` ORDER BY ci";
+		$sql = "SELECT * FROM `persona` order by registro DESC limit 12 ";
 		$consulta = $this->db->query($sql);
 
 		while ($filas = $consulta->fetch_assoc()) {
